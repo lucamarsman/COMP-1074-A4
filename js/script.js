@@ -3,7 +3,7 @@ let cityName = "Toronto"
 let lon;
 let lat;
 
-fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`) // Fetch geocode info (long & lat)
+fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`) // Fetch geocode info (long & lat)
     .then(response => response.json()) // Jsonify response
     .then(data => { // Update lon and lat variables to hold the retrieved coords
         lon = data[0].lon;
